@@ -3,23 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institution Result Checker</title>
+    <title>Jamia Result Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Check Your Results</h1>
-        <input type="text" id="studentId" placeholder="Enter Register Number">
-        <button onclick="findResult()">Get Result</button>
-        
-        <div id="resultDisplay" class="hidden">
-            <h2 id="studentName"></h2>
-            <p>Status: <span id="status"
-class="status-pass"></span></p>
-            <div id="marksTable"></div>
+
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="logo-area">
+                <h1>Jamia Nooriyya Arabiyya</h1>
+                <p>Jamia Result Portal 2025-26</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="search-box">
+                <h2>Check Your Result</h2>
+                <div class="input-group">
+                    <input type="text" id="studentId" placeholder="Enter Register Number" autocomplete="off">
+                    <button onclick="findResult()">Search Result</button>
+                </div>
+                <p id="errorMsg" class="error"></p>
+            </div>
+
+            <div id="resultDisplay" class="result-card hidden">
+                <div class="watermark">RESULT</div>
+                
+                <div class="card-header">
+                    <h3>STUDENT MARK SHEET</h3>
+                    <span id="resultDate">Date: 14-02-2026</span>
+                </div>
+
+                <div class="student-info">
+                    <div class="info-row">
+                        <span class="label">Name:</span>
+                        <span class="value" id="studentName"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Register No:</span>
+                        <span class="value" id="regNo"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Class/Subject:</span>
+                        <span class="value" id="studentClass"></span>
+                    </div>
+                </div>
+
+                <div class="marks-container">
+                    <div class="mark-box">
+                        <span class="mark-label">Total Marks</span>
+                        <span class="mark-value" id="totalMarks"></span>
+                    </div>
+                    <div class="status-box" id="statusBox">
+                        <span class="status-label">Result Status</span>
+                        <span class="status-value" id="status"></span>
+                    </div>
+                </div>
+
+                <div class="footer-msg">
+                    <p>This is a computer generated document.</p>
+                </div>
+
+                <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+            </div>
         </div>
-        <p id="errorMsg" class="error"></p>
+
+        <footer>
+            <p>&copy; 2026 Jamia Nooriyya Arabiyya</p>
+        </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
