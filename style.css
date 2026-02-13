@@ -1,0 +1,130 @@
+/* 1. Global Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6; /* Light grey background like the link */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 2. Main Card Container */
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 480px; /* Limits width on big screens */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Soft shadow */
+    text-align: center;
+}
+
+/* 3. Header Styling */
+h1 {
+    color: #111827; /* Dark text */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* 4. Input Field Styling */
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #2563eb; /* Blue border on click */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 5. Button Styling */
+button {
+    width: 100%;
+    background-color: #2563eb; /* Nice blue color */
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+/* 6. Result Display Area */
+#resultDisplay {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.hidden {
+    display: none; /* Hides result box initially */
+}
+
+#studentName {
+    font-size: 1.25rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+/* 7. Status Badge (Pass/Fail) */
+#status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Dynamic classes for JS to use later */
+.status-pass {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-fail {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* 8. Marks Table */
+#marksTable ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+#marksTable li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+}
+
+/* 9. Error Message */
+.error {
+    color: #dc2626;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}

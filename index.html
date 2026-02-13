@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Result Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Check Your Results</h1>
+        <input type="text" id="studentId" placeholder="Enter Register Number">
+        <button onclick="findResult()">Get Result</button>
+        
+        <div id="resultDisplay" class="hidden">
+            <h2 id="studentName"></h2>
+            <p>Status: <span id="status"
+class="status-pass"></span></p>
+            <div id="marksTable"></div>
+        </div>
+        <p id="errorMsg" class="error"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
